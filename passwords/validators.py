@@ -179,6 +179,7 @@ class DictionaryValidator(BaseSimilarityValidator):
             threshold=threshold)
 
     def get_dictionary_words(self, dictionary):
+        global DICT_CACHE, DICT_FILESIZE
         if DICT_CACHE:
             return DICT_CACHE
         if DICT_FILESIZE is -1:
